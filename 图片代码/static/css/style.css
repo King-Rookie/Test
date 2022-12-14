@@ -1,0 +1,363 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.m-head {
+  height: 78px;
+  border-bottom: 3px solid #cacaca;
+
+  text-align: left;
+  padding: 10px;
+}
+
+.m-head img {
+  height: 60px;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.m-head span {
+  font-size: 32px;
+  color: #999;
+}
+
+.w_1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.w_1200 h2 {
+  margin-top: 30px;
+}
+
+.card {
+  margin: 20px auto;
+  width: 1100px;
+  height: 422px;
+  background-color: #fff;
+  position: relative;
+  /* background-image: url(../img/bg.png); */
+  background-position: center;
+  background-size: contain;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+.card .txt {
+  padding-left: 72px;
+  padding-top: 115px;
+}
+
+.card .txt .departmentTel{
+  margin-top: 5px;
+}
+.card .txt .departmentTel p{
+  line-height: 30px;
+}
+.card .txt .departmentTel p:first-child{
+  font-size: 18px;
+}
+.card .txt .departmentTel p:last-child span:first-child{
+  padding-right: 10px;
+}
+.card .txt .English {
+  font-size: 22px;
+  font-family: 'robotolight';
+  padding-left: 20px;
+}
+
+.card .txt .Chinese {
+  font-size: 30px;
+  font-family: 'SOURCEHANSANSCN';
+}
+
+.cardInfo {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+fieldset {
+  border: 0
+}
+
+head img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+}
+
+
+
+ol,
+ul {
+  list-style: none
+}
+
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%
+}
+
+legend {
+  color: #000000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.c:before,
+.c:after,
+.w:before,
+.w:after {
+  content: " ";
+  display: table;
+}
+
+.c:after,
+.w:after {
+  clear: both;
+}
+
+.c,
+.w {
+  zoom: 1;
+}
+
+.w {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.m-head {
+  height: 78px;
+  border-bottom: 3px solid #cacaca;
+  background: url(../../images/top_bg.png) no-repeat right center;
+  text-align: left;
+}
+
+.m-head a {}
+
+.u-setup {
+  margin-top: 20px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.u-setup.n-setup2 {
+  border-bottom: 3px solid #cacaca;
+}
+
+.u-ipt {
+  display: inline-block;
+  width: 178px;
+  height: 24px;
+  border: 1px solid #b8b8b8;
+  padding: 10px 5px;
+  border-radius: 3px;
+}
+
+.u-select {
+  float: left;
+  width: 195px;
+}
+
+.u-select .selectcontent {
+  position: relative;
+  height: 46px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.u-select .selectbackground {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.u-select strong {
+  display: block;
+  width: 168px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #b8b8b8;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.u-select ul {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 188px;
+  padding: 10px 0;
+  background-color: #fff;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+}
+
+.u-select li {
+  display: block;
+  margin-top: 0;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.u-select li:hover {
+  background-color: #f2f2f2;
+}
+
+.u-select li.n-hide {
+  display: none;
+}
+
+.u-select i {
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: url(../../images/signCardImg/arrow.png);
+  transition: transform .3s;
+  -webkit-transition: -webkit-transform .3s;
+}
+
+.u-select.n-open i {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.u-select.n-open ul {
+  display: block;
+}
+
+.u-select.n-open .selectbackground {
+  display: block;
+}
+
+.m-case img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #acacac;
+}
+
+
+
+
+.m-info .list {
+  float: left;
+}
+
+.m-info .list>li {
+  float: left;
+  margin-top: 15px;
+  width: 50%;
+}
+
+.m-info .list label {
+  height: 46px;
+  line-height: 46px;
+}
+
+.m-info .list em {
+  color: red;
+  height: 16px;
+  line-height: 16px;
+  float: left;
+  width: 20px;
+  text-align: center;
+  font-size: 16px;
+  padding: 18px 0 12px;
+}
+
+
+.m-info .button {
+  display: block;
+  margin-left: 170px;
+  margin-top: 34px;
+  width: 210px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #f97800;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.m-info .button-hide {
+  background-color: #b8b8b8;
+  cursor: wait;
+}
+
+
+@font-face {
+  font-family: 'robotolight';
+  src: url('../fonts/roboto-light.woff') format('woff'),
+    url('../fonts/roboto-light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'SOURCEHANSANSCN';
+  src: url('../fonts/SourceHanSansCN-Regular.woff') format('woff'),
+    url('../fonts/SourceHanSansCN-Regular.svg') format('svg'),
+    url('../fonts/SourceHanSansCN-Regular.eot') format('eot');
+  font-weight: normal;
+  font-style: normal;
+
+}

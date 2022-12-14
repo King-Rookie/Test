@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>名片生成器</title>
+  <link rel="icon" href="static/img/bg-icon.jpg" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="keywords" content=" 名片生成器">
+  <meta name="description" content="名片生成器">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="author" content="BJJ">
+  <link href="static/css/style.css" rel="stylesheet" type="text/css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <!-- <header class="m-head">
+    <img src="static/img/logo.png">
+    <span>
+      名片生成器
+    </span>
+  </header> -->
+  <div class="w_1200">
+    <h2>名片示例</h2>
+    <div class="card " id="card">
+      <img src="static/img/bg.png">
+      <div class="txt">
+        <div class="company">
+          <span id="NameTxt" class="Chinese">张小泉</span>
+          <span id="EnglishNameTxt" class="English">ZhangXiaoQuan</span>
+        </div>
+        <div class="departmentTel">
+          <p>
+            <span id="departmentTxt" >品牌部</span>
+            <span>/</span>
+          <span id="JobTxt" >总裁</span>
+          </p>
+         
+          <p>
+            Tel:<span id="telTxt">1785588176</span>
+            E-mail:<span id="mailTxt">176yudvfg@qq.com</span>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w_1200">
+    <h2>生成我的名片</h2>
+    <div class="cardInfo">
+      <form>
+        <div class="m-info">
+          <div class="info c">
+            <ul class="list list1">
+              <li> <label>员工姓名：</label> <input type="text" id="Name" class="u-ipt" value="张小泉"></li>
+              <li> <label>英文名：</label> <input type="text" id="EnglishName" class="u-ipt" value="zhangxiaoquan"> </li>
+              <li> <label>部门名称：</label> <input type="text" id="department" class="u-ipt" value="品牌部"> </li>
+              <li> <label>职位名：</label> <input type="text" id="Job" class="u-ipt" value="总裁"> </li>
+              <li> <label>电话号码：</label> <input type="text" id="Tel" class="u-ipt" value="17866765765"> </li>
+              <li> <label>邮箱名：</label> <input type="text" id="mail" class="u-ipt" value="1feuytuwy@qq.com"> </li>
+              
+            </ul>
+          </div>
+          <div>
+            <a class="button" onclick="create()">生成名片</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <img src class="img" crossOrigin="anonymous" />
+  <div class="map"></div>
+  <div class="canvas"></div>
+  <script>
+    function create () {
+      var Name = $('#Name').val();
+      var EnglishName = $('#EnglishName').val();
+      var Job = $('#Job').val();
+      var department = $('#department').val();
+      var Tel = $('#Tel').val();
+      var mail = $('#mail').val();
+     
+    
+      $('#JobTxt').html(Job)
+      $('#EnglishNameTxt').html(EnglishName)
+      $('#NameTxt').html(Name)
+      $('#departmentTxt').html(department)
+      $('#telTxt').html(Tel)
+      $('#mailTxt').html(mail)
+      const targetDom = document.querySelector(".card")
+      const copyDom = targetDom.cloneNode(true)
+      copyDom.style.width = targetDom.scrollWidth + 'px'
+      copyDom.style.height = targetDom.scrollHeight + 'px'
+      //document.body.appendChild(copyDom)
+
+
+
+      $('.map').html(copyDom)
+      html2canvas(copyDom, {
+        allowTaint: false,
+        useCORS: true,
+        height: targetDom.scrollHeight,
+        width: targetDom.scrollWidth
+      }).then(canvas => {
+        $('.map').html('')
+        // document.body.appendChild(canvas);
+
+
+
+
+
+        canvas.id = "mycanvas";
+        //生成base64图片数据
+        var dataUrl = canvas.toDataURL();
+        // 下载到本地
+        console.log(dataUrl)
+        var triggerDownload = $("<a>").attr("href", dataUrl).attr("download", Name + "的名片.png").appendTo("body");
+        triggerDownload[0].click();
+
+        // triggerDownload.remove();
+        // console.log($.param({ '图片编码': dataUrl }) + '&' + $('form').serialize())
+      })
+
+    }
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
